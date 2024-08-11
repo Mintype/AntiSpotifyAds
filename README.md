@@ -16,8 +16,8 @@ This is a simple app that SKIPS advertisements on Spotify! When your Spotify app
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Mintype/free-spotify.git
-   cd free-spotify
+   git clone https://github.com/Mintype/AntiSpotifyAds.git
+   cd AntiSpotifyAds
    ```
 
 2. **Install Dependencies**
