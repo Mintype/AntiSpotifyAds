@@ -5,9 +5,6 @@ import pyautogui
 import sys
 import tkinter as tk
 import threading
-from PIL import Image, ImageTk
-from tkinter import *
-from tkinter.ttk import *
 
 def reopen_spotify():
     # Reopen Spotify
@@ -87,8 +84,7 @@ root.title("Anti-Spotify-Ads Control Panel")
 root.geometry("300x100")
 
 # Load the logo
-icon = tk.PhotoImage(file="logo.png")
-root.iconphoto(False, icon, icon)
+root.iconbitmap("logo.ico")
 
 # Add a label
 label = tk.Label(root, text="This program is running...\nClose this window to stop.")
