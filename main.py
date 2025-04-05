@@ -5,10 +5,20 @@ import pyautogui
 import sys
 import tkinter as tk
 import threading
+import os
 
 def reopen_spotify():
     # Reopen Spotify
-    subprocess.Popen(['spotify'])
+    try:
+        # Get the path to the current user's AppData folder
+        user_profile = os.environ.get('USERPROFILE')
+        spotify_path = os.path.join(user_profile, r"AppData\Roaming\Spotify\Spotify.exe")
+        
+        subprocess.run([spotify_path], check=True)
+    except FileNotFoundError:
+        print("Spotify is not installed or not found in the system path.")
+    except subprocess.CalledProcessError:
+        print("Error opening Spotify.")
 
 def press_play():
     # Press the play button to unpause music
